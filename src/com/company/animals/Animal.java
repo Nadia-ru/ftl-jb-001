@@ -9,9 +9,12 @@ class Animal {
     public Animal(String name, Integer weight){
         this.name = name;
         this.weight = weight;
+        this.canFly = false;
     }
 
-    public  Animal(){}
+    public  Animal(){
+        this.canFly = false;
+    }
 
     public void voice(){
         System.out.println("Voice");
