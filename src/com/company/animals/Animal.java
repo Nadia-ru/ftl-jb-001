@@ -23,4 +23,36 @@ class Animal {
     protected void runForward(Integer length){
         this.currentPosition += length;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getWeight() {
+        return weight;
+    }
+
+    public Integer getCurrentPosition() {
+        return currentPosition;
+    }
+
+    public Boolean getCanFly() {
+        return canFly;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+
+    public void setCurrentPosition(Integer currentPosition) {
+        this.currentPosition = currentPosition;
+    }
+
+    public void setCanFly(Boolean canFly) {
+        this.canFly = canFly;
+    }
 }
