@@ -1,12 +1,50 @@
 package com.company.animals;
 
-abstract class Animal {
+public abstract class Animal {
+
+    public static class AnimalWeight{
+        public enum WeightType{
+            KG, GR
+        }
+
+        private Integer value;
+        private WeightType weightType;
+
+        public AnimalWeight(Integer value, WeightType weightType) {
+            this.value = value;
+            this.weightType = weightType;
+        }
+
+        public Integer getValue() {
+            return value;
+        }
+
+        public void setValue(Integer value) {
+            this.value = value;
+        }
+
+        public WeightType getWeightType() {
+            return weightType;
+        }
+
+        public void setWeightType(WeightType weightType) {
+            this.weightType = weightType;
+        }
+
+        @Override
+        public String toString() {
+            return "AnimalWeight{" +
+                    "value=" + value +
+                    ", weightType=" + weightType +
+                    '}';
+        }
+    }
     protected String name;
-    protected Integer weight;
+    protected AnimalWeight weight;
     protected Integer currentPosition = 0;
     protected MoveType moveType;
 
-    public Animal(String name, Integer weight, MoveType moveType){
+    public Animal(String name, AnimalWeight weight, MoveType moveType){
         this.name = name;
         this.weight = weight;
         this.moveType = moveType;
@@ -26,7 +64,7 @@ abstract class Animal {
         return name;
     }
 
-    public Integer getWeight() {
+    public AnimalWeight getWeight() {
         return weight;
     }
 
@@ -40,7 +78,7 @@ abstract class Animal {
         this.name = name;
     }
 
-    public void setWeight(Integer weight) {
+    public void setWeight(AnimalWeight weight) {
         this.weight = weight;
     }
 
