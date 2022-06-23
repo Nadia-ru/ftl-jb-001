@@ -1,7 +1,7 @@
 package com.company.animals;
 
 public enum MoveType {
-    FLY("Р›РµС‚Р°РµС‚"), WALK("РҐРѕРґРёС‚"), SWIM("РџР»Р°РІР°РµС‚");
+    FLY("Летает"), WALK("Ходит"), SWIM("Плавает");
 
     private String value;
 
