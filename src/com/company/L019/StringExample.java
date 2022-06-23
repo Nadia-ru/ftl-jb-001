@@ -5,6 +5,9 @@ import java.util.stream.Stream;
 
 public class StringExample {
 
+    private static String str(){
+        return "Добро пожаловать в FoodTech School";
+    }
     private static void runContentEquals(){
         System.out.println("runContentEquals");
         String str1 = "Добро пожаловать в FoodTech School";
@@ -157,6 +160,98 @@ public class StringExample {
         lines.forEach(System.out::println);
         System.out.println(lines);
     }
+
+    public static void runToCharArray(){
+        System.out.println("");
+        System.out.println("runToCharArray");
+
+        String s1 = "Добро пожаловать на FoodTech School";
+        System.out.println(s1.toCharArray()[4]);
+    }
+
+    public static void runFormat(){
+        System.out.println("");
+        System.out.println("runFormat");
+
+        float floatVar = 1.2f;
+        int intVar = 12;
+        String stringVar = "String";
+        String fs;
+        fs = String.format("float =%.4f ,int =%d, string=%s",floatVar,intVar,stringVar);
+        System.out.println(fs);
+    }
+
+    private static void runValueOf(){
+        double d = 12312.2;
+        boolean b =true;
+        long l =111l;
+        char[] chars = {'d','r'};
+
+        System.out.println(String.valueOf(d));
+        System.out.println(String.valueOf(b));
+        System.out.println(String.valueOf(l));
+        System.out.println(String.valueOf(chars));
+    }
+
+    private static void runRepeat(){
+        String str1 = "string";
+        String repeat = str1.repeat(10);
+        System.out.println(repeat);
+    }
+
+    private static void runIndexOf(){
+        String str = str();
+        String sub1 = "Food", sub2 = "Tech";
+
+        System.out.println(str.indexOf(sub1));
+        System.out.println(str.indexOf(sub2));
+        System.out.println(str.indexOf("fds"));
+    }
+
+    private static void runLastIndexOf(){
+        String str = str();
+        String sub1 = "о";
+
+        System.out.println(str.lastIndexOf(sub1));
+
+    }
+
+    private static void runSubString(){
+        String str =str();
+        System.out.println(str.substring(11,15));
+    }
+
+    private static void runSubSequense()
+    {
+        String str =str();
+        System.out.println(str.subSequence(0,10));
+    }
+
+
+    private static void runSplit(){
+        String str = "Добро-пожаловать-на-сайт";
+        for(String s: str.split("-")){
+            System.out.println(s);
+        }
+    }
+
+    private static void runJoin(){
+        String join = String.join(", ", "1","2","3");
+        System.out.println(join);
+    }
+
+    private static void runTrim(){
+        String str ="            String";
+        System.out.println(str);
+        System.out.println(str.trim());
+    }
+
+    private static void runReplace(){
+        String s= str();
+        System.out.println(s.replace("о","-"));
+        System.out.println(s.replaceFirst("о","-"));
+        System.out.println(s.replaceAll("о","-"));
+    }
     public static void run(){
         runContentEquals();
         runEqualsIgnoreCase();
@@ -171,5 +266,17 @@ public class StringExample {
         runStartWith();
         runEndWith();
         runLines();
+        runToCharArray();
+        runFormat();
+        runValueOf();
+        runRepeat();
+        runIndexOf();
+        runLastIndexOf();
+        runSubString();
+        runSubSequense();
+        runSplit();
+        runJoin();
+        runTrim();
+        runReplace();
     }
 }
