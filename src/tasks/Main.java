@@ -1,12 +1,12 @@
 package tasks;
 
-import tasks.task008.Task008;
+import tasks.task009.Task009;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) {
-        Task008.run();
+        System.out.println(Task009.run());
 
     }
 }
