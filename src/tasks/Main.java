@@ -1,26 +1,26 @@
 package tasks;
 
-import tasks.task015.RandomNumber;
-import tasks.task016.Task016;
-import tasks.task017.Task017;
+
+import tasks.task018.Ball;
+import tasks.task018.Box;
+import tasks.task018.Cylinder;
+import tasks.task018.Shape;
 
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        double ans = Task017.run();
-        System.out.println();
-        System.out.println(" RUN= " + ans);
-        System.out.println(Task017.equation(ans));
+        Box b1 = new Box(200);
+        Cylinder c1 = new Cylinder(3,2);
+        Ball ball = new Ball(3);
+        System.out.println(b1.getVolume());
+        System.out.println(c1.getVolume());
+        System.out.println(ball.getVolume());
+        System.out.println(b1.add(c1));
+        System.out.println(b1.add(ball));
+        System.out.println(b1.add(c1));
 
-        System.out.println();
-        System.out.println();
-        System.out.println();
 
-        double ans2 = Task017.run2(0, 10);
-        System.out.println();
-        System.out.println("RUN2= " + ans2);
-        System.out.println(Task017.equation(ans2));
     }
 }
 
