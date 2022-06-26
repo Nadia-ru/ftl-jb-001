@@ -1,12 +1,9 @@
 package tasks;
 
 
-import tasks.task018.Ball;
-import tasks.task018.Box;
-import tasks.task018.Cylinder;
-import tasks.task018.Shape;
-
-import java.util.Arrays;
+import tasks.task020.Ball;
+import tasks.task020.Box;
+import tasks.task020.Cylinder;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,11 +1,12 @@
-package tasks.task018;
+package tasks.task020;
 
 import java.util.ArrayList;
 
-public class Box extends Shape {
+public class Box implements Shape {
 
     private ArrayList<Shape> shapes = new ArrayList<>();
     private double usedVolume = 0;
+    private double volume;
 
     public Box(double volume) {
         this.volume = volume;
@@ -18,5 +19,10 @@ public class Box extends Shape {
         shapes.add(s);
         this.usedVolume += s.getVolume();
         return true;
+    }
+
+    @Override
+    public double getVolume() {
+        return this.volume;
     }
 }
