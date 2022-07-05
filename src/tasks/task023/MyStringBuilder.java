@@ -42,18 +42,5 @@ public class MyStringBuilder {
         return this.controls.length();
     }
 
-    public static void undo(){
-        StringBuilder x =new StringBuilder("nasdf");
-        MyStringBuilder strB =new MyStringBuilder(x);
 
-        int y =0;
-        int y1 = 3;
-        char y2 ='a';
-        System.out.println(strB.charAt(y));
-        strB.setCharAt(y,y2);
-        System.out.println(strB);
-        strB.deleteCharAt(y1);
-        System.out.println(strB);
-
-    }
 }
