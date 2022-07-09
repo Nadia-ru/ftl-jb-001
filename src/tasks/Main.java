@@ -1,20 +1,19 @@
 package tasks;
 
-
-import tasks.task028.Task028;
-import tasks.task029.Task29;
-import tasks.task030.MyThread;
+import tasks.task031.Task031;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args)  {
-
-        MyThread m = new MyThread();
-        m.run();
-
-
+        Thread t = new Thread(new Task031());
+        Thread t2 = new Thread(new Task031());
+        t.setName("Первый");
+        t2.setName("Второй");
+        t.start();
+        t2.start();
+        Thread.yield();
 
 
     }
