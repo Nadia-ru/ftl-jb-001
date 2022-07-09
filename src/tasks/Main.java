@@ -2,13 +2,17 @@ package tasks;
 
 
 import tasks.task028.Task028;
+import tasks.task029.Task29;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args)  {
-        Object[][] twoDimArray = {{5,7,3,17}, {7,0,1,12}, {8,1,2,3}};
-        Object[][] twoDimArray2 = {{"eee","fff"}, {"ttt","ww"}, {"ppp","rr"}};
-        Task028.iteratorDV(3,4,twoDimArray);
-        Task028.iteratorDV(3,2,twoDimArray2);
+        Map<String,Integer> map = new HashMap<>();
+        String[] seasons  = new String[] {"Winter", "Spring", "Spring", "Spring", "Summer","Summer","Summer","Summer","Summer", "Autumn"};
+        map = Task29.arrayToMap(seasons);
+        System.out.println(map);
     }
 }
 
